@@ -1,0 +1,18 @@
+fastapi                      # API framework.
+uvicorn                      # ASGI server used to run FastAPI. [uvicorn main:app --reload]
+sqlalchemy                   # ORM for database operations.
+psycopg2-binary              # Allows Python to connect to PostgreSQL.
+passlib[bcrypt]              # Used for password encryption.
+python-jose[cryptography]    # Creates and verifies JWT tokens.
+pydantic                     # Data validation and serialization.
+python-dotenv                # Loads .env variables.
+
+
+#project Architecture
+
+database.py	    -->   database connection
+models.py	    -->   database tables
+schemas.py	    -->   request/response validation
+auth.py	        -->   authentication logic
+dependencies.py	-->   authorization
+main.py	        -->   API routes
